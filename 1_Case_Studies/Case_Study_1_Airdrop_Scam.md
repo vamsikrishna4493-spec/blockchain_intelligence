@@ -52,8 +52,8 @@ The fake dApp asked users to connect MetaMask and sign an approval transaction, 
 
 ## 🧾 Compliance Outcome
 - Compiled alert summary for **SMR submission** under AUSTRAC guidelines.  
-- Flagged associated addresses for **blacklisting in KYT**.
-- Shared findings with ecosystem partners via **TRM Threat Intelligence**.
+- Flag associated addresses for **blacklisting in KYT**.
+- Share findings with ecosystem partners
 
 ---
 
