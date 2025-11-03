@@ -15,5 +15,5 @@ This section summarizes my understanding of compliance frameworks and reporting 
 - Internal risk scoring models (transactional, behavioral, and counterparty-based)
 
 ## 🚀 Outcome
-By adhering to global AML/CFT standards, these procedures ensure that investigations are defensible, consistent, and auditable — supporting MoonPay’s mission to build a secure and compliant crypto ecosystem.
+By adhering to global AML/CFT standards, these procedures ensure that investigations are defensible, consistent, and auditable — supporting respective blockchain entity mission to build a secure and compliant crypto ecosystem.
 
