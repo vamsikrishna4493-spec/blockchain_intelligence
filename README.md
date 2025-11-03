@@ -1,4 +1,4 @@
-# 🧩 Crypto Compliance & Blockchain Investigations Portfolio
+# 🧩 Crypto Compliance & Blockchain Investigations Portfolio  
 
 **Author:** Vamsi Krishna  
 **Role:** Independent Blockchain Investigator | Crypto Compliance & FIU Analyst  
@@ -6,84 +6,214 @@
 
 ---
 
-## 👋 Introduction
+## 👋 Introduction  
 
 Hi, I’m **Vamsi Krishna**, a blockchain investigator specializing in **crypto compliance, FIU operations, and on-chain investigations**.  
-For the past two years, I’ve worked independently on **transaction monitoring and flow investigations**, reconstructing suspicious cases and tracing high-risk wallet activity using ** Breadcrumbs, and OSINT techniques, Chainalysis KYT, Reactor,**.
 
-My work focuses on uncovering **illicit fund flows**, understanding **behavioral patterns**, and improving **red flag indicators** that help Financial Intelligence Units (FIUs) detect and prevent crypto-related financial crime.
+For the past two years, I’ve worked independently on **transaction monitoring and fund flow tracing**, reconstructing suspicious cases and investigating high-risk wallet activity using tools like **Breadcrumbs, Etherscan, Chainalysis KYT, Reactor, and OSINT sources**.  
+
+My work focuses on uncovering illicit fund flows, identifying behavioral typologies, and improving red-flag indicators that help **Financial Intelligence Units (FIUs)** detect and prevent crypto-related financial crime.  
 
 ---
 
-## 🎯 Objective
+## 🎯 Objective  
 
-This repository showcases my **crypto compliance and investigation capabilities** — aligning with the responsibilities of an **FIU Transaction Monitoring Analyst** at **MoonPay**.
+This repository showcases my **crypto compliance and investigation capabilities**, aligning with the role of an **FIU Transaction Monitoring Analyst**.  
 
-It demonstrates:
+It demonstrates:  
 - End-to-end investigation processes  
-- Analytical reasoning used to interpret blockchain transactions  
-- Familiarity with **AML/CFT frameworks**, **VASP investigations**, and **SAR/SMR reporting workflows**  
-- Technical curiosity and documentation discipline expected from a compliance analyst in a regulated crypto environment  
+- Analytical reasoning in blockchain transaction tracing  
+- Familiarity with **AML/CFT frameworks, VASP investigations, and SMR/SAR reporting**  
+- Documentation and compliance discipline expected in a regulated crypto environment  
 
 ---
 
-## 🧭 Repository Structure
+## 🧭 Repository Structure  
 
 | Folder | Description |
 |--------|--------------|
-| **1_Case_Studies/** | Contains real-world styled case investigations, e.g., investment scams, bridge/mixer tracing, and illicit fund tracking. |
-| **2_Tools_and_Methods/** | My investigative stack — tools, data sources, OSINT references, and workflows for transaction tracing. |
-| **3_Data_Analysis/** | Sample notebooks and visualizations demonstrating transaction flow patterns and analytical insight. |
-| **4_Compliance_Procedures/** | Standard FIU processes, red-flag indicator lists, and SMR templates aligned with AUSTRAC/FinCEN style. |
+| `1_Case_Studies/` | Real-world styled case investigations — investment scams, bridge/mixer tracing, exploit tracking. |
+| `2_Tools_and_Methods/` | My investigative stack — tools, OSINT sources, tracing workflows. |
+| `3_Compliance_Procedures/` | FIU workflows, red-flag libraries, and SMR templates (AUSTRAC/FinCEN aligned). |
 
 ---
 
-## 🔍 Featured Case Studies
-
-### 1. Investment Scam Investigation (Ethereum)
-A detailed analysis of how funds flowed from victims to a scammer network via multiple wallets and DEX swaps.  
-- **Objective:** Identify source of funds and exit routes.  
-- **Tools:** Chainalysis Reactor, Etherscan, Breadcrumbs.  
-- **Outcome:** Mapped 4 intermediary wallets linked to centralized exchanges.  
-- **Compliance Insight:** Layering via ERC-20 swaps and small-amount dispersal were key laundering patterns.  
-
-### 2. Bridge & Mixer Tracing Case (Cross-chain Flow)
-A study on funds moving from **Ethereum → Tron → Binance Smart Chain** using a public bridge and Tornado Cash.  
-- **Objective:** Detect pattern of obfuscation and identify service providers.  
-- **Tools:** Chainalysis Reactor, Arkham Intelligence, TRM Public Risk Data.  
-- **Outcome:** Cross-chain swap behavior matched known “layering” red flags; SMR draft prepared.  
+## 🔍 Featured Case Studies  
 
 ---
 
-## 🛠️ Tools & Techniques
+### 🕵️‍♂️ Case Study 1: Fraudulent Airdrop Investigation  
+
+#### 🎯 Objective  
+Investigate a fraudulent airdrop campaign that lured users into connecting wallets and approving malicious contracts, leading to token theft.  
+
+#### 🧩 Background  
+Victims reported losses after engaging with a fake **$XGOLD** airdrop promoted on **Twitter and Discord** via:  
+🔗 `xgoldairdrop[.]org`  
+
+The malicious dApp prompted users to connect MetaMask and sign approvals granting token transfer access.  
+
+#### 🧠 Investigation Process  
+
+**1. Initial Intake (KYT)**  
+- Collected 15+ victim wallet addresses.  
+- Identified scammer wallet: `0x82b1a0282f4fcbf90f55cad5768c0a021cdcbaee`.  
+- KYT flagged: **High Risk – Phishing.**  
+
+**2. On-Chain Tracing (Breadcrumbs / Chainalysis Reactor)**  
+- Funds from 18 victims consolidated into scam wallet.  
+- Immediate swaps: WETH → USDT.  
+- Outflows to **Binance** and **FixedFloat**.  
+
+**3. Attribution (OSINT)**  
+- Domain WHOIS: Russian registrar, reused phishing template.  
+- Twitter handle **@xgold_airdrop** reused same wallet in other scam posts.  
+
+**4. Risk Indicators**  
+| Indicator | Description |
+|------------|-------------|
+| Repeated small inbound transfers | Typical phishing collection behavior |
+| Rapid token swaps | Immediate laundering |
+| No prior contract interactions | Fresh scam wallet |
+| Known scam template | Shared assets across scam cluster |
+
+#### 📊 Findings  
+| Type | Value |
+|------|-------|
+| Victim Wallets | 18 |
+| Total Loss | ~$12,400 |
+| Assets | USDT, WETH |
+| Destination | Binance, FixedFloat |
+| Classification | Phishing / Airdrop Scam |
+
+#### 🧾 Compliance Outcome  
+- SMR prepared under **AUSTRAC** standards.  
+- Scammer addresses blacklisted in KYT.  
+- Findings shared with partners.  
+
+#### 🧠 Learning  
+Fake airdrops exploit user trust and contract approvals.  
+Education + proactive screening can significantly reduce risk exposure.  
+
+✅ **Tags:** #Phishing #AirdropScam #TransactionMonitoring #Chainalysis #Compliance  
+
+---
+
+### 🧠 Case Study 2: Fei Protocol – Reentrancy Exploit & Laundering Flow  
+
+#### 🎯 Objective  
+Investigate the **Fei Protocol (Rari Fuse)** reentrancy exploit and trace post-exploit fund movements across bridges and mixers.  
+
+#### 🧩 Background  
+In **April 2022**, Fei Protocol’s Rari Fuse pools were exploited via a **reentrancy vulnerability**, leading to ~$80M loss in ETH, DAI, USDC, and LUSD.  
+Root cause: failure to implement **check-effect-interaction pattern**.  
+
+Initial exploiter:  
+`0x6162759edad730152f0df8115c698a42e666157f`  
+
+#### 🧠 Investigation Process  
+
+**1. Alert Intake and Case Setup**  
+- KYT tagged “Exploit Proceeds”, “Mixer Interaction”.  
+- Tokens: ETH, DAI, USDC, LUSD.  
+- First seen: `2022-04-30 08:06 UTC`.  
+
+**2. On-Chain Tracing (Etherscan / Breadcrumbs / Reactor)**  
+- Multiple reentrant borrow/withdraw calls in single block.  
+- Consolidated funds into exploiter wallet.  
+- Swaps via Uniswap V2 → DAI → ETH → USDC.  
+- Bridged to **BSC** and **Polygon** (via Multichain).  
+- Deposited ~100 ETH batches into **Tornado Cash**.  
+- Post-mixer withdrawals → new wallets → **Binance, Huobi**.  
+
+**3. Pattern Recognition**  
+| Indicator | Description |
+|------------|-------------|
+| Reentrancy | Multiple borrow/withdraw in single block |
+| Rapid consolidation | Funds merged to 1 main address |
+| Cross-chain | Bridging between Ethereum, BSC, Polygon |
+| Obfuscation | Tornado Cash 100 ETH deposits |
+| Off-ramping | Exchange hot wallet deposits |
+
+**4. OSINT Correlation**  
+- Confirmed via **CertiK**, **Coindesk**, **Chainabuse**.  
+- Labeled as “Fei Protocol Exploiter” on **Etherscan**.  
+- Chainalysis Intel: mixer overlap with sanctioned laundering wallets.  
+
+#### 📊 Findings  
+| Type | Value |
+|------|-------|
+| Source | Fei/Rari Fuse Exploit |
+| Attack Vector | Reentrancy (Compound fork) |
+| Bridge | Multichain / Anyswap |
+| Mixer | Tornado Cash |
+| Laundered Value | ~$78–80M |
+| Destination | Binance, Huobi |
+| Classification | Smart Contract Exploit + Cross-chain Laundering |
+
+#### 🧾 Compliance Outcomes  
+- Escalated internally: **High Priority – Exploit Proceeds.**  
+- Filed **SMR** under **FATF Recommendation 16**.  
+- Shared with CEX compliance contacts for wallet freezing.  
+- Updated KYT risk models to detect reentrancy exploit typologies.  
+
+#### 🧠 Learning  
+- Reentrancy remains a frequent DeFi exploit vector.  
+- Cross-chain bridges + mixers accelerate laundering.  
+- Early alerting and CEX coordination improve recovery chances.  
+
+#### 🧾 References  
+- CertiK: *Fei Protocol Incident Report (2022)*  
+- Coindesk: *Fei Protocol Loses $80M in Rari Fuse Exploit*  
+- Etherscan: Fei Exploiter – `0x6162759e...6157f`  
+- Chainalysis: *Reentrancy Exploits & Laundering Typologies*  
+
+✅ **Tags:** #DeFiExploit #BridgeLaundering #TornadoCash #CrossChain #Compliance  
+
+---
+
+## 🛠️ Tools & Techniques  
 
 | Category | Tools Used |
 |-----------|-------------|
-| **Blockchain Analytics** | Breadcrumbs, TRM Explorer, Chainalysis KYT, Reactor |
-| **On-chain Explorers** | Etherscan, BscScan, TronScan, Arkham Intelligence |
-| **OSINT Sources** | Whois, URLScan, ScamSniffer, Reddit, Telegram OSINT |
-| **Visualization & Reporting** | Power BI, Google Sheets, Graphviz, Excel |
-| **Compliance Frameworks** | FATF, AUSTRAC, FinCEN, EU AMLD, Travel Rule concepts |
+| Blockchain Analytics | Breadcrumbs, Chainalysis KYT, Reactor, TRM Explorer |
+| On-Chain Explorers | Etherscan, BscScan, TronScan, Arkham Intelligence |
+| OSINT Sources | Whois, URLScan, ScamSniffer, Reddit, Telegram |
+| Visualization & Reporting | Power BI, Graphviz, Google Sheets |
+| Compliance Frameworks | FATF, AUSTRAC, FinCEN, EU AMLD, Travel Rule |
+
 
 ---
 
-## 🧮 Data Analysis Examples
+## 🧾 Compliance Procedures and Reporting Standards  
 
-Within `3_Data_Analysis/`, you’ll find:
-- A **simple Jupyter notebook** simulating transaction flow logic for risk scoring  
-- Visual examples of **ETH transfer graphs** showing fund dispersion patterns  
-- A **risk categorization model** (manual logic) that classifies alerts into *Scam / Bridge / Mixer / Exchange Funnel*  
+### 🧩 Key Compliance Functions  
+- **Transaction Monitoring** – Reviewing KYT alerts & escalation.  
+- **Enhanced Due Diligence (EDD)** – Investigating high-risk counterparties.  
+- **Case Documentation** – Summaries with risk scoring & rationale.  
+- **SAR/SMR Drafting** – AUSTRAC & FATF compliant submissions.  
 
-This shows my ability to **blend investigation logic with data analytics** — a valuable combination for FIU work.
+### 📘 Frameworks & Guidelines  
+- **FATF Recommendation 15 & 16** (VASPs & Wire Transfers)  
+- **AUSTRAC / EU AMLD5** obligations  
+- **Travel Rule, KYC, KYT procedures**  
+- **Internal risk models** — transactional, behavioral, counterparty-based  
+
+### 🚀 Outcome  
+By adhering to global AML/CFT standards, my investigations remain:  
+✅ **Defensible** – backed by verifiable on-chain data  
+✅ **Consistent** – structured escalation logic  
+✅ **Auditable** – compliant with internal & regulatory review  
 
 ---
 
-## 🧩 Compliance & FIU Workflows
+## 🧩 Conclusion  
 
-Inside `4_Compliance_Procedures/`:
-- **FIU Workflow:** Alert intake → Case creation → Transaction enrichment → Escalation → SMR filing  
-- **Red-Flag Indicator Library:** Investment scams, Pig butchering, P2P layering, Bridge & mixer typologies  
-- **SMR Template (AUSTRAC Style):** How a concise, risk-based report is structured — covering entity details, transaction summary, and rationale.  
+This portfolio demonstrates my ability to:  
+- Conduct **end-to-end blockchain investigations**  
+- Interpret **cross-chain laundering patterns**  
+- Apply **compliance reasoning and reporting frameworks**  
+- Contribute effectively to **FIU and AML operations** in the crypto sector   
 
 ---
 
