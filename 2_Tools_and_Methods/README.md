@@ -1,28 +1,33 @@
-## 🧰 Tools and Methods
+## 🧰 Tools and Methods  
 
-This section highlights the primary blockchain investigation tools and analytical methods I apply across crypto compliance and forensic investigations.
-
----
-
-### 🧩 Tools
-
-- **Chainalysis KYT** — Transaction monitoring, automated alert ingestion, and real-time risk scoring of wallets and counterparties.  
-- **Chainalysis Reactor** — Deep-dive wallet tracing, flow visualization, and entity linkage mapping for investigative escalation.  
-- **TRM Labs** — Cross-chain exposure analytics, entity enrichment, and address clustering to detect laundering typologies.  
-- **Etherscan / Breadcrumbs** — Manual transaction reconstruction, smart contract decoding, and inter-wallet relationship graphing.  
-- **OSINT Techniques** — WHOIS lookups, social media correlation, domain analysis, and blockchain explorer validation for external attribution.  
-- **Maltego / IntelX** *(optional)* — Correlation of wallet addresses with darknet, breach, or leaked data repositories to establish off-chain connections.
+This section outlines the key blockchain investigation tools and analytical techniques I use to support crypto compliance, on-chain forensics, and risk investigations.  
 
 ---
 
-### ⚙️ Methods
+### 🧩 Tools  
 
-- **Transaction Flow Reconstruction** — Step-by-step tracing of illicit funds through on-chain hops to detect layering or obfuscation stages.  
-- **Counterparty Risk Profiling** — Evaluating exposure to high-risk entities (mixers, unlicensed exchanges, sanctioned wallets).  
-- **Cross-Chain Tracing** — Identifying bridge transfers and chain-hopping typologies used for fund laundering or obfuscation.  
-- **Temporal Analysis** — Studying transaction timing and clustering to spot automation, bot activity, or laundering cycles.  
-- **Pattern Recognition** — Detecting behavioral indicators (e.g., repeated 100 ETH mixer deposits, burst transfers post-exploit).  
-- **Red Flag Mapping** — Aligning observations to **FATF**, **AUSTRAC**, and **FinCEN** typologies for standardized compliance escalation.  
+- **Chainalysis KYT** — Used for continuous transaction monitoring, automated alert management, and real-time wallet risk scoring.  
+- **Chainalysis Reactor** — Enables deep on-chain tracing, flow visualization, and mapping of wallet networks and entity relationships.  
+- **TRM Labs** — Provides multi-chain intelligence, address clustering, and typology detection for advanced risk analysis.  
+- **Etherscan & Breadcrumbs** — Facilitate manual transaction reconstruction, smart contract review, and wallet relationship graphing.  
+- **OSINT Techniques** — Combine open-source methods such as WHOIS lookups, domain analysis, and social media correlation to link on-chain data with real-world entities.  
+- **Maltego / IntelX (Optional)** — Assist in correlating wallet data with darknet activity, breach datasets, or leaked information to establish off-chain attribution.  
+
+---
+
+### ⚙️ Methods  
+
+- **Transaction Flow Reconstruction** — Rebuilds the movement of funds step-by-step to identify key hops, layering stages, and laundering attempts.  
+- **Counterparty Risk Profiling** — Assesses exposure to sanctioned entities, unlicensed exchanges, or mixers through risk-based analysis.  
+- **Cross-Chain Tracing** — Tracks assets moved via bridges or cross-chain swaps to uncover attempts at obfuscating origin or ownership.  
+- **Temporal Analysis** — Evaluates transaction frequency and timing patterns to detect automation, wash trading, or coordinated transfers.  
+- **Pattern Recognition** — Identifies behavioral signatures such as repetitive mixer deposits, burst withdrawals, or exploit-linked fund movements.  
+- **Red Flag Mapping** — Aligns analytical findings with **FATF**, **AUSTRAC**, and **FinCEN** red flag indicators to standardize escalation and reporting decisions.  
+
+---
+
+By combining these tools and methods, I build end-to-end visibility into blockchain activity—connecting wallet behavior, entity exposure, and regulatory risk into a single coherent investigation framework.  
+ 
 - **Attribution & Reporting** — Collating Etherscan, KYT, and OSINT evidence for **Suspicious Matter Reports (SMRs)** or law enforcement referrals.
 
 ---
